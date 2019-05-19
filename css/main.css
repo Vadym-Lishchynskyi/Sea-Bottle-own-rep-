@@ -1,0 +1,42 @@
+html{
+    --element-width: 0px;
+}
+body{
+    padding: 0;
+    margin: 0;
+    background-color: #555555;
+}
+.choose {
+    height: 10pt;
+    width: 150px;
+    color: white;
+    margin: 5px;
+    display: flex;
+    justify-content: space-around;
+    border:1px solid red;/*new item*/
+}
+.main{
+    height: 300px;
+    display: flex;
+    justify-content: space-around;
+    margin: 15px;
+}
+.battle{
+    width: 340px;
+    height: 340px;
+    background-color: #cccccc;
+    border:1px solid red;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+.each{
+    outline: 1px solid red;
+    width:  var(--element-width);
+    height: var(--element-width);
+}
+h3{
+    margin: auto;
+    color:white;
+}

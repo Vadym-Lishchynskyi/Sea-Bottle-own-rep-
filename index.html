@@ -1,0 +1,54 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <link rel="stylesheet" href="css/main.css">
+  <script src="js/vendor/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+  <div class="choose">
+    <div value="4" class="size">4</div>
+    <div value="5" class="size">5</div>
+    <div value="6" class="size">6</div>
+    <div value="7" class="size">7</div>
+    <div value="8" class="size">8</div>
+    <div value="9" class="size">9</div>
+    <div value="10" class="size">10</div>
+    <div value="11" class="size">11</div>
+    <div value="12" class="size">12</div>
+    <div value="13" class="size">13</div>
+    <div value="14" class="size">14</div>
+  </div>
+  <h3>Игрок 1</h3>
+  <div class="main">
+    <div class="battle"></div>
+    <div class="battle"></div>
+  </div>
+  <h3>Игрок 2</h3>
+  <div class="main">
+    <div class="battle"></div>
+    <div class="battle"></div>
+  </div>
+  <script>
+    $(function () {
+      var size;
+      $(".size").click(function (){
+        size = $(this).attr("value");
+        $(this).css('color','blue');
+        console.log(size);
+        var size_block = 340/size;
+        $('html').css('--element-width',size_block+'px');
+        for(var i =0;i<size*size;i++){
+          console.log(size);
+          $(".battle").html(function () {
+            $(this).html($(this).html() + '<div class="each"></div>');
+          });
+        };
+
+      });
+    });
+  </script>
+</body>
+</html>
